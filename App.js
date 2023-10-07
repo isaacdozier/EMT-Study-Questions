@@ -14,18 +14,14 @@ export default function RandomSelectionGame() {
       complete: (results) => {
         // Extract the data you need from the CSV file
         const filteredData = results.data.filter((item) => {
-          return item.length === 2;
+          return item.length >= 2;
         });
-
-        console.log(filteredData)
   
         const data = filteredData.map((item, index) => ({
           id: index + 1, // You can use a unique identifier here
           answer: item[0],
           text: item[1],
         }));
-
-        console.log(data)
   
         setResults(data);
       },

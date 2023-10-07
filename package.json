@@ -1,18 +1,21 @@
 {
   "name": "emt-study",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "version": "0.0.0-alpha",
+  "homepage": "",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "predeploy": "npm run build",
+    "deploy": "expo-gh-pages",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
     "@types/react": "^18.2.25",
     "@types/react-dom": "~18.0.10",
     "expo": "~49.0.13",
+    "expo-gh-pages": "^1.2.0",
     "expo-status-bar": "~1.6.0",
     "papaparse": "^5.4.1",
     "react": "18.2.0",
@@ -20,10 +23,12 @@
     "react-native": "0.72.5",
     "react-native-fs": "^2.20.0",
     "react-native-web": "~0.19.6",
-    "react-papaparse": "^4.1.0"
+    "react-papaparse": "^4.1.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "gh-pages": "^6.0.0"
   },
   "private": true
 }
